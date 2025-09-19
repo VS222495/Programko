@@ -8,7 +8,7 @@ public class Matrix implements IMatrix {
         this.cols = data[0].length;
         this.data = new int[rows][cols];
 
-        // zkopírujeme data z původního pole
+
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 this.data[i][j] = data[i][j];
@@ -30,7 +30,7 @@ public class Matrix implements IMatrix {
     @Override
     public IMatrix times(IMatrix matrix) {
         if (this.cols != matrix.getRows()) {
-            System.out.println("❌ Tyto matice nejde násobit!");
+            System.out.println("Tyto matice nejde násobit!");
             return null;
         }
 
@@ -48,7 +48,7 @@ public class Matrix implements IMatrix {
     @Override
     public IMatrix add(IMatrix matrix) {
         if (this.rows != matrix.getRows() || this.cols != matrix.getColumns()) {
-            System.out.println("❌ Tyto matice nejde sečíst!");
+            System.out.println("Tyto matice nejde sečíst!");
             return null;
         }
 

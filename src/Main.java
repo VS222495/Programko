@@ -10,11 +10,15 @@ public class Main {
         int[][] bData = {
                 {7, 8, 5},
                 {9, 10, 6},
-                {11, 12, 4}
+                {11, 12, 5}
         };
+
+
 
         IMatrix A = new Matrix(aData);
         IMatrix B = new Matrix(bData);
+
+
 
         System.out.println("Matice A:");
         System.out.println(A);
